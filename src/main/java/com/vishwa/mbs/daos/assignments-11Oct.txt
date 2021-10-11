@@ -1,0 +1,13 @@
+1. Make sure, you are able to run the code till now
+2. H2 is getting loaded on the browser
+
+3. Try to create the DAO classes for all the remaining entities :
+
+  Booking
+  City
+  Language
+  Movie
+  Status
+  Theatre
+  User
+  UserType

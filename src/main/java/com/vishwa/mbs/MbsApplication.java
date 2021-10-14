@@ -2,11 +2,18 @@ package com.vishwa.mbs;
 
 import com.vishwa.mbs.daos.MovieDao;
 import com.vishwa.mbs.entities.Movie;
+import com.vishwa.mbs.entities.Status;
+import com.vishwa.mbs.exceptions.StatusDetailsNotFoundException;
+import com.vishwa.mbs.services.MovieService;
+import com.vishwa.mbs.services.StatusService;
+import com.vishwa.mbs.services.impl.MovieServiceImpl;
+import com.vishwa.mbs.services.impl.StatusServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Main class of the SpringBoot
@@ -14,67 +21,49 @@ import java.time.LocalDateTime;
 @SpringBootApplication
 public class MbsApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws StatusDetailsNotFoundException {
 
 		//I have got the hold of Application Context
 		ApplicationContext ctx = SpringApplication.run(MbsApplication.class, args);
 
-		//Got the hold of MovieDao bean
-	    MovieDao movieDao = ctx.getBean(MovieDao.class);
+		//Let's test the status  service
 
-		System.out.println(movieDao);
+		StatusService statusService = ctx.getBean(StatusServiceImpl.class);
+		System.out.println("statusService bean : "+ statusService);
+		Status status = new Status();
+		status.setStatusName("RELEASED");
+		statusService.acceptStatusDetails(status);
 
-		System.out.println("Hello Studnets ");
+		Status status1 = new Status();
+		status1.setStatusName("BLOCKED");
+		statusService.acceptStatusDetails(status1);
 
-		/**
-		 * Add a new movie to DB
-		 */
+
+
+		Status savedStatus = statusService.getStatusBasedOnId(1);
+
+		System.out.println(savedStatus);
+
+		//Get the list of all the statuses
+
+		List<Status> savedStatuses = statusService.getAllStatuses();
+
+		System.out.println(savedStatuses);
+
 
 		Movie movie = new Movie();
-		movie.setMovieName("shaangchi");
-		movie.setMovieDescription("It's a great movie");
-		movie.setReleaseDate(LocalDateTime.of(2021,6,27,5,30));
 		movie.setDuration(150);
-		movie.setCoverPhotoUrl("www.shaangchi/cover-photo-url");
-		movie.setTrailerUrl("www.shaangchi/trailer-url");
-
-		System.out.println("<-----  Before movie is stored -------->");
-		System.out.println(movie);
-
-		System.out.println("<--- After movie is stored ------>");
-
-		Movie savedMovie = movieDao.save(movie); // provided by default
-
-		System.out.println(savedMovie);
-
-		System.out.println("<---- Let's search the movie based on id ---->");
-
-		Movie searchedMovie = movieDao.findById(savedMovie.getMovieId()).get();
-
-		System.out.println(searchedMovie);
-
-		System.out.println("<---- I want to update the movie record --->");
-		System.out.println("Actual Movie duration : " + searchedMovie.getDuration());
+		movie.setMovieName("Koi Mil Gya");
+		movie.setMovieDescription("Awesome movie by Jadoo");
+		movie.setTrailerUrl("trailer_url");
+		movie.setCoverPhotoUrl("cover_photo_url");
+		movie.setReleaseDate(LocalDateTime.of(2021,03,04,05,15,16));
+		movie.setStatus(status);
 
 
-		searchedMovie.setDuration(250);
+		MovieService movieService = ctx.getBean(MovieServiceImpl.class);
 
-		Movie updatedMovie = movieDao.save(searchedMovie);
-
-		System.out.println("Updated movie duration : " + searchedMovie.getDuration());
-
-
-		System.out.println("<----- Search by the movie name ---->");
-		Movie foundByName = movieDao.findMovieByMovieName(updatedMovie.getMovieName());
-
-		System.out.println(foundByName);
-
-		System.out.println("<------- Let's delete the record as well --------->");
-
-		movieDao.deleteById(updatedMovie.getMovieId());
-
-
-
+		movieService.acceptMovieDetails(movie);
 
 	}
 

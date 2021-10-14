@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
+
 @Entity
 public class Status {
 
@@ -44,3 +45,4 @@ public class Status {
         return "Status{" + "statusId=" + statusId + ", statusName='" + statusName + '\'' + '}';
     }
 }
+

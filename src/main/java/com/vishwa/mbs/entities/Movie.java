@@ -2,12 +2,13 @@ package com.vishwa.mbs.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * I want the name of the table should be Cinema
  */
-//@Table(name="Cinema")
+
 @Entity
 public class Movie {
 
@@ -32,6 +33,19 @@ public class Movie {
 
     @Column(length = 500, nullable = false)
     private String trailerUrl;
+
+
+    @ManyToOne
+    @JoinColumn(name = "status_id", nullable = false)
+    private Status status;
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     public int getMovieId() {
         return movieId;

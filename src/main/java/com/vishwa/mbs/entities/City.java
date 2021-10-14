@@ -1,9 +1,10 @@
 package com.vishwa.mbs.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -15,7 +16,12 @@ public class City {
     @Column(length = 20, nullable = false)
     private String cityName;
 
+    @OneToMany(mappedBy = "city", fetch = FetchType.EAGER)
+    @JsonBackReference
+    private Set<Theatre> theatres;
+
     public City() {}
+
 
     public City(int cityId, String cityName) {
         this.cityId = cityId;
@@ -24,6 +30,14 @@ public class City {
 
     public City(String cityName) {
         this.cityName = cityName;
+    }
+
+    public Set<Theatre> getTheatres() {
+        return theatres;
+    }
+
+    public void setTheatres(Set<Theatre> theatres) {
+        this.theatres = theatres;
     }
 
     public int getCityId() {

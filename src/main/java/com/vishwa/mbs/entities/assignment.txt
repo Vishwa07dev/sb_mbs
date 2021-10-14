@@ -1,0 +1,3 @@
+Check each entity, and see if any relationship can be made
+Use the annotation to establish the relationship
+Very it by looks at the tables created in DB

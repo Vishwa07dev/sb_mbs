@@ -4,6 +4,8 @@ import com.vishwa.mbs.daos.MovieDao;
 import com.vishwa.mbs.entities.Movie;
 import com.vishwa.mbs.exceptions.MovieDetailsNotFoundException;
 import com.vishwa.mbs.services.MovieService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -11,12 +13,14 @@ import java.util.List;
 @Service
 public class MovieServiceImpl implements MovieService {
 
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(MovieServiceImpl.class);
     @Autowired
     private MovieDao movieDao;
 
     @Override
     public Movie acceptMovieDetails(Movie movie) {
+        LOGGER.debug("Movie object passed for creation is : "+ movie);
+        LOGGER.info("acceptMovieDetails method is triggered");
         return movieDao.save(movie);
     }
 
@@ -32,8 +36,15 @@ public class MovieServiceImpl implements MovieService {
      */
     @Override
     public Movie getMovieDetails(int movieId) throws MovieDetailsNotFoundException {
-        Movie savedMovie = movieDao.findById(movieId).orElseThrow(()
-                -> new MovieDetailsNotFoundException("Movie details not found for the movie id : "+ movieId));
+        LOGGER.debug("Movie is passed for searching movie is  : " + movieId);
+        LOGGER.info("getMovieDetails method is triggered");
+        Movie savedMovie = movieDao.findById(movieId).orElseThrow(
+                ()
+                        -> {
+                    LOGGER.error("Movie was not found for the id : " + movieId);
+                    return new MovieDetailsNotFoundException("Movie details not found for the movie id : " + movieId);
+                }
+        );
         return savedMovie;
     }
 

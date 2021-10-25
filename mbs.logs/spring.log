@@ -1,27 +1,153 @@
-2021-10-18 19:38:51.619  INFO 74240 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 74240 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
-2021-10-18 19:38:51.626  INFO 74240 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
-2021-10-18 19:38:52.505  INFO 74240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-18 19:38:52.584  INFO 74240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 8 JPA repository interfaces.
-2021-10-18 19:38:53.096  INFO 74240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
-2021-10-18 19:38:53.106  INFO 74240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 19:38:53.107  INFO 74240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
-2021-10-18 19:38:53.232  INFO 74240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 19:38:53.232  INFO 74240 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1542 ms
-2021-10-18 19:38:53.272  INFO 74240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-18 19:38:53.490  INFO 74240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-18 19:38:53.500  INFO 74240 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
-2021-10-18 19:38:53.676  INFO 74240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-18 19:38:53.741  INFO 74240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-18 19:38:53.909  INFO 74240 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-18 19:38:54.045  INFO 74240 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-10-18 19:38:54.951  INFO 74240 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-18 19:38:54.961  INFO 74240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-18 19:38:55.439  WARN 74240 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-18 19:38:56.036  INFO 74240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
-2021-10-18 19:38:56.050  INFO 74240 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 4.961 seconds (JVM running for 5.859)
-2021-10-18 19:38:56.053  INFO 74240 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
-2021-10-18 19:38:56.053  WARN 74240 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
-2021-10-18 19:38:56.053 ERROR 74240 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
-2021-10-18 20:09:25.135  INFO 74240 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-18 20:09:25.162  INFO 74240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-18 20:09:25.167  INFO 74240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-23 18:58:51.076  INFO 12907 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 12907 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
+2021-10-23 18:58:51.082  INFO 12907 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
+2021-10-23 18:58:52.181  INFO 12907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-23 18:58:52.293  INFO 12907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 8 JPA repository interfaces.
+2021-10-23 18:58:52.925  INFO 12907 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-10-23 18:58:52.935  INFO 12907 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-23 18:58:52.935  INFO 12907 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-23 18:58:53.039  INFO 12907 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-23 18:58:53.039  INFO 12907 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1874 ms
+2021-10-23 18:58:53.078  INFO 12907 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-23 18:58:53.284  INFO 12907 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-23 18:58:53.293  INFO 12907 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
+2021-10-23 18:58:53.465  INFO 12907 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-23 18:58:53.529  INFO 12907 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-23 18:58:53.707  INFO 12907 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-23 18:58:53.851  INFO 12907 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-23 18:58:54.754  INFO 12907 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-23 18:58:54.766  INFO 12907 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 18:58:55.321  WARN 12907 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-23 18:58:55.974  INFO 12907 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-10-23 18:58:55.989  INFO 12907 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 5.573 seconds (JVM running for 6.711)
+2021-10-23 18:58:55.993  INFO 12907 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
+2021-10-23 18:58:55.994  WARN 12907 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
+2021-10-23 18:58:55.994 ERROR 12907 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
+2021-10-23 18:59:24.284  INFO 12907 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-23 18:59:24.290  INFO 12907 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-23 18:59:24.294  INFO 12907 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-10-23 19:22:51.398  INFO 12907 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:22:51.436  INFO 12907 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-23 19:22:51.458  INFO 12907 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-23 19:22:57.397  INFO 14086 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 14086 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
+2021-10-23 19:22:57.399  INFO 14086 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
+2021-10-23 19:22:58.655  INFO 14086 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-23 19:22:58.795  INFO 14086 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 8 JPA repository interfaces.
+2021-10-23 19:22:59.491  INFO 14086 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-10-23 19:22:59.506  INFO 14086 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-23 19:22:59.506  INFO 14086 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-23 19:22:59.643  INFO 14086 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-23 19:22:59.644  INFO 14086 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2171 ms
+2021-10-23 19:22:59.685  INFO 14086 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-23 19:22:59.933  INFO 14086 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-23 19:22:59.942  INFO 14086 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
+2021-10-23 19:23:00.186  INFO 14086 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-23 19:23:00.259  INFO 14086 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-23 19:23:00.458  INFO 14086 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-23 19:23:00.617  INFO 14086 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-23 19:23:01.796  INFO 14086 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-23 19:23:01.808  INFO 14086 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:23:02.393  WARN 14086 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-23 19:23:03.101  INFO 14086 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-10-23 19:23:03.121  INFO 14086 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 6.247 seconds (JVM running for 7.267)
+2021-10-23 19:23:03.126  INFO 14086 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
+2021-10-23 19:23:03.127  WARN 14086 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
+2021-10-23 19:23:03.127 ERROR 14086 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
+2021-10-23 19:24:23.146  INFO 14086 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-23 19:24:23.149  INFO 14086 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-23 19:24:23.154  INFO 14086 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-10-23 19:29:34.772  WARN 14086 --- [http-nio-7777-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-10-23 19:37:26.202  INFO 14086 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:37:26.240  INFO 14086 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-23 19:37:26.250  INFO 14086 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-23 19:37:32.366  INFO 14909 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 14909 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
+2021-10-23 19:37:32.369  INFO 14909 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
+2021-10-23 19:37:33.264  INFO 14909 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-23 19:37:33.373  INFO 14909 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 8 JPA repository interfaces.
+2021-10-23 19:37:33.960  INFO 14909 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-10-23 19:37:33.972  INFO 14909 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-23 19:37:33.972  INFO 14909 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-23 19:37:34.081  INFO 14909 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-23 19:37:34.081  INFO 14909 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1651 ms
+2021-10-23 19:37:34.111  INFO 14909 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-23 19:37:34.259  INFO 14909 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-23 19:37:34.266  INFO 14909 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
+2021-10-23 19:37:34.423  INFO 14909 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-23 19:37:34.483  INFO 14909 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-23 19:37:34.646  INFO 14909 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-23 19:37:34.767  INFO 14909 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-23 19:37:35.624  INFO 14909 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-23 19:37:35.635  INFO 14909 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:37:36.086  WARN 14909 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-23 19:37:36.604  INFO 14909 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-10-23 19:37:36.620  INFO 14909 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 4.759 seconds (JVM running for 5.808)
+2021-10-23 19:37:36.623  INFO 14909 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
+2021-10-23 19:37:36.624  WARN 14909 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
+2021-10-23 19:37:36.624 ERROR 14909 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
+2021-10-23 19:38:22.560  INFO 14909 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-23 19:38:22.561  INFO 14909 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-23 19:38:22.563  INFO 14909 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-23 19:38:22.629  WARN 14909 --- [http-nio-7777-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2021-10-23 19:44:34.985  INFO 14909 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:44:35.005  INFO 14909 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-23 19:44:35.014  INFO 14909 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-23 19:44:41.007  INFO 15244 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 15244 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
+2021-10-23 19:44:41.012  INFO 15244 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
+2021-10-23 19:44:41.946  INFO 15244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-23 19:44:42.063  INFO 15244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 8 JPA repository interfaces.
+2021-10-23 19:44:42.698  INFO 15244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-10-23 19:44:42.709  INFO 15244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-23 19:44:42.709  INFO 15244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-23 19:44:42.819  INFO 15244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-23 19:44:42.820  INFO 15244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1750 ms
+2021-10-23 19:44:42.854  INFO 15244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-23 19:44:43.026  INFO 15244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-23 19:44:43.035  INFO 15244 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
+2021-10-23 19:44:43.236  INFO 15244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-23 19:44:43.297  INFO 15244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-23 19:44:43.447  INFO 15244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-23 19:44:43.568  INFO 15244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-23 19:44:44.405  INFO 15244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-23 19:44:44.415  INFO 15244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:44:44.871  WARN 15244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-23 19:44:45.470  INFO 15244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-10-23 19:44:45.482  INFO 15244 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 5.01 seconds (JVM running for 5.977)
+2021-10-23 19:44:45.485  INFO 15244 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
+2021-10-23 19:44:45.485  WARN 15244 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
+2021-10-23 19:44:45.485 ERROR 15244 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
+2021-10-23 19:44:57.507  INFO 15244 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-23 19:44:57.507  INFO 15244 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-23 19:44:57.509  INFO 15244 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-23 19:46:53.992  WARN 15244 --- [http-nio-7777-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2021-10-23 19:47:02.467  INFO 15244 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:47:02.481  INFO 15244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-23 19:47:02.488  INFO 15244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-23 19:47:08.783  INFO 15359 --- [main] com.vishwa.mbs.MbsApplication            : Starting MbsApplication using Java 11.0.8 on vimohan-mn2.linkedin.biz with PID 15359 (/Users/vimohan/Downloads/mbs/target/classes started by vimohan in /Users/vimohan/Downloads/mbs)
+2021-10-23 19:47:08.787  INFO 15359 --- [main] com.vishwa.mbs.MbsApplication            : No active profile set, falling back to default profiles: default
+2021-10-23 19:47:09.975  INFO 15359 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-23 19:47:10.118  INFO 15359 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 8 JPA repository interfaces.
+2021-10-23 19:47:10.853  INFO 15359 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-10-23 19:47:10.866  INFO 15359 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-23 19:47:10.867  INFO 15359 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-23 19:47:11.040  INFO 15359 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-23 19:47:11.040  INFO 15359 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2180 ms
+2021-10-23 19:47:11.079  INFO 15359 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-23 19:47:11.299  INFO 15359 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-23 19:47:11.308  INFO 15359 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbdb'
+2021-10-23 19:47:11.506  INFO 15359 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-23 19:47:11.587  INFO 15359 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-23 19:47:11.759  INFO 15359 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-23 19:47:11.905  INFO 15359 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-23 19:47:12.849  INFO 15359 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-23 19:47:12.861  INFO 15359 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 19:47:13.358  WARN 15359 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-23 19:47:14.031  INFO 15359 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-10-23 19:47:14.046  INFO 15359 --- [main] com.vishwa.mbs.MbsApplication            : Started MbsApplication in 5.914 seconds (JVM running for 7.069)
+2021-10-23 19:47:14.049  INFO 15359 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an info log
+2021-10-23 19:47:14.050  WARN 15359 --- [main] com.vishwa.mbs.MbsApplication            : I am writing a warning log
+2021-10-23 19:47:14.050 ERROR 15359 --- [main] com.vishwa.mbs.MbsApplication            : I am writing an error log
+2021-10-23 19:47:22.464  INFO 15359 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-23 19:47:22.466  INFO 15359 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-23 19:47:22.468  INFO 15359 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-10-23 20:15:14.491  INFO 15359 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-23 20:15:14.520  INFO 15359 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-23 20:15:14.529  INFO 15359 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

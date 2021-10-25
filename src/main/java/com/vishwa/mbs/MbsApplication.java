@@ -4,15 +4,18 @@ import com.vishwa.mbs.daos.MovieDao;
 import com.vishwa.mbs.entities.Movie;
 import com.vishwa.mbs.entities.Status;
 import com.vishwa.mbs.exceptions.StatusDetailsNotFoundException;
+import com.vishwa.mbs.services.InitService;
 import com.vishwa.mbs.services.MovieService;
 import com.vishwa.mbs.services.StatusService;
 import com.vishwa.mbs.services.impl.MovieServiceImpl;
 import com.vishwa.mbs.services.impl.StatusServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -34,12 +37,16 @@ public class MbsApplication {
 
 		SpringApplication.run(MbsApplication.class, args);
 
-		//Debug log
-		LOGGER.debug("I am writing a debug log");
-		LOGGER.info("I am writing an info log");
-		LOGGER.warn("I am writing a warning log");
-		LOGGER.error("I am writing an error log");
 
+
+	}
+
+	@Bean
+	CommandLineRunner init(InitService initService){
+		return args -> {
+			System.out.println("This will be executed as soon as the application is started");
+			initService.init();
+		};
 	}
 
 }
